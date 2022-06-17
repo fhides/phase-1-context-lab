@@ -74,14 +74,14 @@ const allWagesFor = function () {
     return payable
 }
 
-let findEmployeeByFirstName = (srcArray, firstName)=> {
+let findEmployeeByFirstName = function(srcArray, firstName) {
     return srcArray.find(function(record){
       return record.firstName === firstName
     })
   }
 
-  let calculatePayroll = (arrayOfEmployeeRecords)=>{
+  let calculatePayroll = function(arrayOfEmployeeRecords){
     return arrayOfEmployeeRecords.reduce(function(memo, rec){
         return memo + allWagesFor.call(rec)
     }, 0)
-} 
+}
